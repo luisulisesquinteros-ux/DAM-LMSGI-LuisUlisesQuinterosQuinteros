@@ -1,0 +1,31 @@
+{
+  "$schema": "./XSDcifp.schema.json",
+  "cifp": {
+    "alumne": [
+      {
+        "id": 1,
+        "nom": "Luis Ulises",
+        "llinatges": "Quinteros Quinteros",
+        "data_matricula": "2026-02-08",
+        "curs": "DAM"
+      }
+    ],
+    "professor": [
+      {
+        "id": 10,
+        "nom": "Benito",
+        "llinatges": "Perez Galdós",
+        "data_incorporacio": "2020-01-10",
+        "departament": "Informàtica",
+        "assignatura": [
+          {
+            "id_assignatura": 11,
+            "nom_assignatura": "Programacio",
+            "cicle": "DAM",
+            "data_inici": "2026-01-08"
+          }
+        ]
+      }
+    ]
+  }
+}

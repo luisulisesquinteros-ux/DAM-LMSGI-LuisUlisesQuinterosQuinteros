@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cifp SYSTEM "DTDcifp.dtd">
+
+<cifp>
+  <alumne id="1">
+    <nom>Luis Ulises</nom>
+    <llinatges>Quinteros Quinteros</llinatges>
+    <data_matricula>2026-02-08</data_matricula>
+    <curs valor="DAM">DAM</curs>
+  </alumne>
+
+  <professor id="10">
+    <nom>Benito</nom>
+    <llinatges>Perez Galdós</llinatges>
+    <data_incorporacio>2020-01-10</data_incorporacio>
+    <departament valor="Informàtica">Informàtica</departament>
+
+    <assignatura id_assignatura="101">
+      <nom_assignatura cicle="DAM">Programacio</nom_assignatura>
+      <data_inici>2024-09-01</data_inici>
+    </assignatura>
+  </professor>
+</cifp>

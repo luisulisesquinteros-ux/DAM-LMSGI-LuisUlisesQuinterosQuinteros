@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <!-- Tipos simples -->
+  <xs:simpleType name="cursType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DAM"/>
+      <xs:enumeration value="DAW"/>
+      <xs:enumeration value="ASIX"/>
+      <xs:enumeration value="SMX"/>
+      <xs:enumeration value="SEIA"/>
+      <xs:enumeration value="ER"/>
+      <xs:enumeration value="AUT"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="departamentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Informàtica"/>
+      <xs:enumeration value="Electricitat"/>
+      <xs:enumeration value="Automoció"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Element raíz -->
+  <xs:element name="cifp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="alumne" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nom" type="xs:string"/>
+              <xs:element name="llinatges" type="xs:string"/>
+              <xs:element name="data_naixement" type="xs:string" minOccurs="0"/>
+              <xs:element name="correu" type="xs:string" minOccurs="0"/>
+              <xs:element name="telefon" type="xs:string" minOccurs="0"/>
+              <xs:element name="adreça" type="xs:string" minOccurs="0"/>
+              <xs:element name="data_matricula" type="xs:string"/>
+              <xs:element name="curs">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="valor" type="cursType" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="professor" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nom" type="xs:string"/>
+              <xs:element name="llinatges" type="xs:string"/>
+              <xs:element name="data_naixement" type="xs:string" minOccurs="0"/>
+              <xs:element name="correu" type="xs:string" minOccurs="0"/>
+              <xs:element name="telefon" type="xs:string" minOccurs="0"/>
+              <xs:element name="adreça" type="xs:string" minOccurs="0"/>
+              <xs:element name="data_incorporacio" type="xs:string"/>
+              <xs:element name="departament">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="valor" type="departamentType" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="assignatura" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nom_assignatura">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="cicle" type="cursType" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="data_inici" type="xs:string" minOccurs="0"/>
+                    <xs:element name="data_final" type="xs:string" minOccurs="0"/>
+                  </xs:sequence>
+                  <xs:attribute name="id_assignatura" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+

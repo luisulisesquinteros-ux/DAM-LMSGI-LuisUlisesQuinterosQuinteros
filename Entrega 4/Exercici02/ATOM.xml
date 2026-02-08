@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Exercici de Sindicació de Continguts: Cotxes</title><!-- obligatorio-->
+  <subtitle>ÚLTIMES NOTÍCIES SOBRE EL MÓN DEL MOTOR</subtitle>
+  <link rel="self" href="https://www.motornews.com/feed.xml"/>
+  <link href="https://www.motornews.com"/>  
+  <updated>2024-11-15T12:00:00Z</updated><!-- obligatorio-->
+  <author>
+    <name>MOTOR NEWS</name>
+  </author>
+  <id>https://www.motornews.com/</id><!-- obligatorio-->
+
+  <entry>
+    <title>Ferrari presenta el seu nou model híbrid, el SF-2024</title>
+    <link href="https://www.motornews.com/ferrari-sf-2024-hibrid"/>
+    <id>https://www.motornews.com/ferrari-sf-2024-hibrid</id>
+    <updated>2024-11-14T10:00:00Z</updated>    
+    <summary>
+    Ferrari ha presentat el seu nou model híbrid, el SF-2024, que combina rendiment i sostenibilitat. 
+    Amb un motor V8 de 800 CV i un sistema elèctric de suport, és el cotxe més avançat de la marca fins ara. 
+    La seva autonomia en mode elèctric arriba als 50 km.
+    </summary>
+  </entry>
+
+  <entry>
+    <title>Volkswagen anuncia una inversió de 10.000 milions en vehicles elèctrics</title>
+    <link href="https://www.motornews.com/volkswagen-inversio-10000-milions-electrics"/>
+    <id>https://www.motornews.com/volkswagen-inversio-10000-milions-electrics</id>
+    <updated>2024-11-14T15:30:00Z</updated>    
+    <summary>
+    Volkswagen ha anunciat una inversió de 10.000 milions d'euros en vehicles elèctrics. 
+    Aquesta inversió permetrà el desenvolupament de nous models elèctrics i l'expansió de la xarxa de càrrega.
+    </summary>
+  </entry>
+
+</feed>

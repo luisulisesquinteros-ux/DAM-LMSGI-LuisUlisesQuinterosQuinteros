@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<cifp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="XSDcifp.xsd">
+  <alumne id="1">
+    <nom>Luis Ulises</nom>
+    <llinatges>Quinteros Quinteros</llinatges>
+    <data_matricula>2026-02-08</data_matricula>
+    <curs valor="DAM">DAM</curs>
+  </alumne>
+
+  <professor id="10">
+    <nom>Benito</nom>
+    <llinatges>Perez Galdós</llinatges>
+    <data_incorporacio>2020-01-10</data_incorporacio>
+    <departament valor="Informàtica">Informàtica</departament>
+
+    <assignatura id_assignatura="11">
+      <nom_assignatura cicle="DAM">Programacio</nom_assignatura>
+      <data_inici>2026-01-08</data_inici>
+    </assignatura>
+  </professor>
+</cifp>

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JSON Schema CIFP Pau Casesnoves",
+  "type": "object",
+  "properties": {
+    "cifp": {
+      "type": "object",
+      "properties": {
+        "alumne": {
+          "type": "array",
+          "description": "Llista d'elements amb els camps d'alumne",
+          "items": { "$ref": "#/$defs/alumneType" }
+        },
+        "professor": {
+          "type": "array",
+          "description": "Llista d'elements amb els camps de professor",
+          "items": { "$ref": "#/$defs/professorType" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["cifp"],
+
+  "$defs": {
+    "alumneType": {
+      "type": "object",
+      "required": ["id", "nom", "llinatges", "data_matricula", "curs"],
+      "properties": {
+        "id": { "type": "integer" },
+        "nom": { "type": "string" },
+        "llinatges": { "type": "string" },
+        "data_naixement": { "type": "string" },
+        "correu": { "type": "string" },
+        "telefon": { "type": "string" },
+        "adreça": { "type": "string" },
+        "data_matricula": { "type": "string" },
+        "curs": {
+          "type": "string",
+          "enum": ["DAM", "DAW", "ASIX", "SMX", "SEIA", "ER", "AUT"]
+        }
+      }
+    },
+    "professorType": {
+      "type": "object",
+      "required": ["id", "nom", "llinatges", "data_incorporacio", "departament"],
+      "properties": {
+        "id": { "type": "integer" },
+        "nom": { "type": "string" },
+        "llinatges": { "type": "string" },
+        "data_naixement": { "type": "string" },
+        "correu": { "type": "string" },
+        "telefon": { "type": "string" },
+        "adreça": { "type": "string" },
+        "data_incorporacio": { "type": "string" },
+        "departament": {
+          "type": "string",
+          "enum": ["Informàtica", "Electricitat", "Automoció"]
+        },
+        "assignatura": {
+          "type": "array",
+          "description": "Array d'elements amb els camps d'assignatura",
+          "items": { "$ref": "#/$defs/assignaturaType" }
+        }
+      }
+    },
+    "assignaturaType": {
+      "type": "object",
+      "required": ["id_assignatura", "nom_assignatura", "cicle"],
+      "properties": {
+        "id_assignatura": { "type": "integer" },
+        "nom_assignatura": { "type": "string" },
+        "cicle": {
+          "type": "string",
+          "enum": ["DAM", "DAW", "ASIX", "SMX", "SEIA", "ER", "AUT"]
+        },
+        "data_inici": { "type": "string" },
+        "data_final": { "type": "string" }
+      }
+    }
+  }
+}
